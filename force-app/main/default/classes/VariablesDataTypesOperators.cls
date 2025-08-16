@@ -46,8 +46,10 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        if(a == null || b == null) {
+            return null;}
+         else { return a - b;} // Replace null with the variable you used to store the result    
+         }
 
     /**
      * Question 3
@@ -58,8 +60,10 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        if(a == null || b == null) {
+            return null;}
+         else { return a * b;} // Replace null with the variable you used to store the result    
+         }
 
     /**
      * Question 4
@@ -71,8 +75,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Double division(Double a, Double b) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        if(a == null || b == null) {
+            return null;} 
+        if (b == 0) {return 0;}
+        else { return a / b;} // Replace null with the variable you used to store the result    
+        }
 
     /**
      * Question 5
@@ -85,7 +92,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+        if(num == null ) {return null;}
+         else { return num;} // Replace null with the variable you used to store the result
     }
 
     /**
@@ -226,13 +234,14 @@ public with sharing class VariablesDataTypesOperators {
      * @param e The fifth number.
      * @return The result of the adjusted arithmetic expression.
      */
+    /*
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
         Double result = a * b - c / (Double) d + e;
 
         return null; // Replace null with the variable you used to store the result
     }
-
+*/
     /**
      * Question 16
      * Converts the temperature from Fahrenheit to Celsius.
