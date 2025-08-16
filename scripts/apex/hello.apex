@@ -8,5 +8,7 @@
 string tempvar = 'Amy Ho';
 System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
+/*
 VariablesDataTypesOperatorsTest myTest = new VariablesDataTypesOperatorsTest();
 myTest.testAddition();
+*/
