@@ -154,10 +154,8 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Boolean isDateInPast(Date dt) {
         Date today = Date.today();
-        system.debug(today);
-        system.debug(dt);
-        if  (dt == null)    {return null;}
-        if  (today < dt)    {return true;}
+        if  (dt == null || dt == today)    {return null;}
+        if  (dt < today)    {return true;}
         return false;
         // Replace null with the variable you used to store the result
     }
