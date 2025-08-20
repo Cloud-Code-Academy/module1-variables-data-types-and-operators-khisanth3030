@@ -178,10 +178,11 @@ public with sharing class VariablesDataTypesOperators {
      * @param minutes The number of minutes.
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
-    Integer millisecondsPerMinute = 60000; // Make this value a constant
+    public static final Integer MILLISECONDSPERMINUTE = 60000;
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
+         // Make this value a constant
         Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+        return milliseconds * MILLISECONDSPERMINUTE; // Replace null with the variable you used to store the result
     }    
 
     /**
@@ -243,14 +244,14 @@ public with sharing class VariablesDataTypesOperators {
      * @param e The fifth number.
      * @return The result of the adjusted arithmetic expression.
      */
-    /*
+    
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = a * b - c / (Double) d + e;
+        Double result = ((a * b) - c) / ((Double) d + e);
 
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
-*/
+
     /**
      * Question 16
      * Converts the temperature from Fahrenheit to Celsius.

@@ -5,9 +5,9 @@
 * The main purpose of this test class is to ensure the accuracy and correctness of the methods in the VariablesDataTypesOperators class.
 */
 
-@IsTest
-public class VariablesDataTypesOperatorsTest {
-    @IsTest
+@isTest
+private class VariablesDataTypesOperatorsTest {
+    @isTest
     static void testAddition() {
         Integer result = VariablesDataTypesOperators.addition(2, 3);
         Assert.areEqual(5, result, 'Incorrect addition result');
@@ -21,7 +21,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(null, result, 'Incorrect null addition result');
     }
 
-    @IsTest
+    @isTest
     static void testSubtraction() {
         Integer result = VariablesDataTypesOperators.subtraction(10, 5);
         Assert.areEqual(5, result, 'Incorrect subtraction result');
@@ -30,7 +30,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(5, result, 'Incorrect negative subtraction result');
     }
 
-    @IsTest
+    @isTest
     static void testMultiplication() {
         Integer result = VariablesDataTypesOperators.multiplication(5, 5);
         Assert.areEqual(25, result, 'Incorrect multiplication result');
@@ -39,7 +39,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(-25, result, 'Incorrect negative multiplication result');
     }
 
-    @IsTest
+    @isTest
     static void testDivision() {
         Decimal result = VariablesDataTypesOperators.division(10, 5);
         Assert.areEqual(2, result, 'Incorrect division result');
@@ -51,7 +51,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(2.5, result, 'Incorrect division result with double value');
     }
 
-    @IsTest
+    @isTest
     static void testIsEven() {
         Boolean result = VariablesDataTypesOperators.isEven(10);
         Assert.areEqual(true, result, 'Incorrect isEven result');
@@ -60,7 +60,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(false, result, 'Incorrect isEven result');
     }
 
-    @IsTest
+    @isTest
     static void testIsPositive() {
         Boolean result = VariablesDataTypesOperators.isPositive(10);
         Assert.areEqual(true, result, 'Incorrect isPositive result');
@@ -69,7 +69,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(false, result, 'Incorrect isPositive result');
     }
 
-    @IsTest
+    @isTest
     static void testConcatenateStrings() {
         String result = VariablesDataTypesOperators.concatenateStrings('Hello', 'World');
         Assert.areEqual('HelloWorld', result, 'Incorrect concatenateStrings result');
@@ -78,7 +78,7 @@ public class VariablesDataTypesOperatorsTest {
     }
 
 
-	@IsTest
+	@isTest
 	static void testCreateSentence() {
 		// Test with noun 'cat' and verb 'jumping'
 		String result = VariablesDataTypesOperators.createSentence('cat', 'jumping', '!');
@@ -105,7 +105,7 @@ public class VariablesDataTypesOperatorsTest {
 		);
 	}
 
-    @IsTest
+    @isTest
     static void testIsDateInPast() {
         Boolean result = VariablesDataTypesOperators.isDateInPast(Date.today().addDays(-1));
         Assert.areEqual(true, result, 'Incorrect isDateInPast result');
@@ -114,7 +114,7 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(false, result, 'Incorrect isDateInPast result');
     }
 
-    @IsTest
+    @isTest
     static void testIsDateTodayOrFuture() {
         Boolean result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(1));
         Assert.areEqual(true, result, 'Incorrect isDateTodayOrFuture result');
@@ -123,66 +123,66 @@ public class VariablesDataTypesOperatorsTest {
         Assert.areEqual(false, result, 'Incorrect isDateTodayOrFuture result');
     }
 
-    @IsTest
+    @isTest
     static void testConvertMinutesToMilliseconds() {
         Integer result = VariablesDataTypesOperators.convertMinutesToMilliseconds(1);
         Assert.areEqual(60000, result, 'Incorrect convertMinutesToMilliseconds result');
     }
 
-    @IsTest
+    @isTest
     static void testAverageOfThreeNumbers() {
         Double result = VariablesDataTypesOperators.averageOfThreeNumbers(1, 2, 3);
         Assert.areEqual(2.0, result, 'Incorrect averageOfThreeNumbers result');
     }
 
-    @IsTest
+    @isTest
     static void testAdjustOrderOfOperations1() {
         Assert.areEqual(36, VariablesDataTypesOperators.adjustOrderOfOperations1(5, 7, 3), 'Incorrect result for adjustOrderOfOperations1 with 5, 7, 3 as arguments');
         Assert.areEqual(-8, VariablesDataTypesOperators.adjustOrderOfOperations1(-3, 1, 4), 'Incorrect result for adjustOrderOfOperations1 with -3, 1, 4 as arguments');
         Assert.areEqual(0, VariablesDataTypesOperators.adjustOrderOfOperations1(0, 0, 0), 'Incorrect result for adjustOrderOfOperations1 with 0, 0, 0 as arguments');
     }
 
-    @IsTest
+    @isTest
     static void testAdjustOrderOfOperations2() {
         Assert.areEqual(8, VariablesDataTypesOperators.adjustOrderOfOperations2(), 'Incorrect result for adjustOrderOfOperations2');
         Assert.areNotEqual(43, VariablesDataTypesOperators.adjustOrderOfOperations2(), 'Incorrect result for adjustOrderOfOperations2');
     }
 
-    @IsTest
+    @isTest
     static void testComplexOrderOfOperations() {
         Assert.areEqual(8.0, VariablesDataTypesOperators.complexOrderOfOperations(4, 2, 2, 2, 5), 'Incorrect result for complexOrderOfOperations with 4, 2, 2, 2, 5 as arguments');
         Assert.areEqual(5.0, VariablesDataTypesOperators.complexOrderOfOperations(3, 3, 3, 3, 3), 'Incorrect result for complexOrderOfOperations with 3, 3, 3, 3, 3 as arguments');
     }
 
-    @IsTest
+    @isTest
     static void testConvertFahrenheitToCelsius() {
         Assert.areEqual((Double)100.0, VariablesDataTypesOperators.convertFahrenheitToCelsius((Double)212.0), 'Incorrect conversion from 212 Fahrenheit to Celsius');
         Assert.areEqual((Double)0.0, VariablesDataTypesOperators.convertFahrenheitToCelsius((Double)32.0), 'Incorrect conversion from 32 Fahrenheit to Celsius');
         Assert.areEqual((Double)-17.8, Decimal.valueOf(VariablesDataTypesOperators.convertFahrenheitToCelsius((Double)0.0)).setScale(1), 'Incorrect conversion from 0 Fahrenheit to Celsius');
     }
 
-    @IsTest
+    @isTest
     static void testPerformDivisionAndCast() {
         Assert.areEqual(2, VariablesDataTypesOperators.performDivisionAndCast((Double)5.0, (Double)2.0), 'Incorrect division result when rounding down is correct');
         Assert.areEqual(2, VariablesDataTypesOperators.performDivisionAndCast((Double)5.5, (Double)2.0), 'Incorrect division result when rounding up is correct');
         Assert.areEqual(2, VariablesDataTypesOperators.performDivisionAndCast((Double)4.0, (Double)2.0), 'Incorrect division result when exact division is performed');
     }
 
-    @IsTest
+    @isTest
     static void testCalculateWeeklyPaycheck() {
         Assert.areEqual(400.0, VariablesDataTypesOperators.calculateWeeklyPaycheck(40.0, (Double)10.0), 'Incorrect weekly paycheck for 40.0 rate and 10.0 hours');
         Assert.areEqual(896.375, VariablesDataTypesOperators.calculateWeeklyPaycheck(35.5, (Double)25.25), 'Incorrect weekly paycheck for 35.5 rate and 25.25 hours');
         Assert.areEqual(0.0, VariablesDataTypesOperators.calculateWeeklyPaycheck(0.0, (Double)10.0), 'Incorrect weekly paycheck for 0.0 rate and 10.0 hours');
     }
 
-    @IsTest
+    @isTest
     static void testCalculateMonthlyPaycheck() {
         Assert.areEqual(1600.0, VariablesDataTypesOperators.calculateMonthlyPaycheck(40.0, (Double)10.0), 'Incorrect monthly paycheck for 40.0 rate and 10.0 hours');
         Assert.areEqual(3585.5, VariablesDataTypesOperators.calculateMonthlyPaycheck(35.5, (Double)25.25), 'Incorrect monthly paycheck for 35.5 rate and 25.25 hours');
         Assert.areEqual(0.0, VariablesDataTypesOperators.calculateMonthlyPaycheck(0.0, (Double)10.0), 'Incorrect monthly paycheck for 0.0 rate and 10.0 hours');
     }
 
-    @IsTest
+    @isTest
     static void testCalculateTotalCost() {
         Assert.areEqual(22.0, VariablesDataTypesOperators.calculateTotalCost(10, 2, 0.1), 'Incorrect calculateTotalCost result');
         Assert.areEqual(0.0, VariablesDataTypesOperators.calculateTotalCost(0, 0, 0.0), 'Incorrect calculateTotalCost result');
