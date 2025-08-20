@@ -140,7 +140,7 @@ public with sharing class VariablesDataTypesOperators {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
+		return 'The ' + noun + ' is ' + verb + endingPunctuation; // Replace null with the variable you used to store the result
 	}
 
     /**
@@ -153,7 +153,13 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+        Date today = Date.today();
+        system.debug(today);
+        system.debug(dt);
+        if  (dt == null)    {return null;}
+        if  (today < dt)    {return true;}
+        return false;
+        // Replace null with the variable you used to store the result
     }
 
     /**
@@ -178,7 +184,7 @@ public with sharing class VariablesDataTypesOperators {
      * @param minutes The number of minutes.
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
-    public static final Integer MILLISECONDSPERMINUTE = 60000;
+    static final Integer MILLISECONDSPERMINUTE = 60000;
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
          // Make this value a constant
         Integer milliseconds;
@@ -263,6 +269,8 @@ public with sharing class VariablesDataTypesOperators {
         final Double subractfactor = 32.0;
         final Double multiplyfactor = 5.0;
         final Double divideFactor = 9.0;
+
+
     
         return null; // Replace null with the variable you used to store the result
     }
